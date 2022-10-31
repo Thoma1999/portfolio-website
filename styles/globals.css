@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .heroButton {
+    @apply mx-2 px-2 py-2  uppercase text-sm tracking-widest relative cursor-pointer before:absolute before:bottom-[-1px] before:right-0 before:h-1 before:w-0 text-black before:bg-black before:transition-all before:duration-1000 hover:before:left-0 hover:before:w-full hover:before:bg-white hover:text-white
+  }
+}

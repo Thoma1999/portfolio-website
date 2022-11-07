@@ -4,6 +4,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundSquares from "../components/BackgroundSquares";
 import profilePic from "../public/profilepic.svg";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -14,7 +15,19 @@ function Hero({}: Props) {
     delaySpeed: 2000,
   });
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <motion.div
+    initial={{
+      opacity: 0,
+      scale: 0.5,
+    }}
+    animate={{
+      opacity: 1,
+      scale: 1,
+    }}
+    transition={{
+      duration: 1.5,
+    }}
+     className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundSquares />
       <Image
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
@@ -44,7 +57,7 @@ function Hero({}: Props) {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

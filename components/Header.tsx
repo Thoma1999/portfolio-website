@@ -1,8 +1,9 @@
-import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 
-type Props = {};
+type Props = {
+
+};
 
 function Header({}: Props) {
   return (
@@ -27,7 +28,7 @@ function Header({}: Props) {
           style={{ height: 30, width: 30 }}
           className="cursor-pointer mr-3"
           url="https://www.linkedin.com/in/thomas-laryea-6804b8108"
-          bgColor="black"
+          bgColor= "black"
         />
         <SocialIcon
           style={{ height: 30, width: 30 }}
